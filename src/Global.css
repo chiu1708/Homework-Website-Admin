@@ -1,0 +1,46 @@
+
+/* Global text color */
+.blue {
+    color: #3B38A0;
+}
+.red {
+    color: #D25D5D;
+}
+.orange {
+    color: #D25D5D;
+}
+.green {
+    color: #78C841;
+}
+.brown {
+    color: #C75D2C;
+}
+.purple {
+    color: #640D5F;
+}
+.yellow {
+    color: #FFCC00;
+}
+.pink {
+    color: #FFB4B4;
+}
+.grey {
+    color: #B1AB86;
+}
+.violet {
+    color: #563A9C;
+}
+
+
+/* Global assets */
+.title-container {
+  padding: 1rem 2rem;
+}
+.title-container h1 {
+  font-size: 48px;
+}
+
+.page-container {
+  width: 100%;
+  padding: 2rem 0;
+}

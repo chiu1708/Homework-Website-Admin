@@ -1,0 +1,51 @@
+
+.dashboard-container .menu-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+
+.dashboard-container .menu-container .dropdown-container select {
+  height: 2rem;
+  width: 8rem;
+  border: 1px solid #444;
+  border-radius: .3rem;
+}
+.dashboard-container .menu-container .add-button-container button {
+  border: none;
+  background-color: #bbb;
+  height: 2rem;
+  border: 1px solid #444;
+  width: 8rem;
+  border-radius: .3rem;
+}
+
+
+.dashboard-container .table-container {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: .4s;
+}
+.dashboard-container .table-container.active {
+  height: auto;
+  margin-top: 1rem;
+  transition: .4s;
+}
+.dashboard-container .table-container .table {
+  margin: 0 2rem;
+  overflow: scroll;
+  width: calc(100% - 4rem);
+  display: inline-block
+}
+.dashboard-container .table-container .table::-webkit-scrollbar {
+  display: none;
+}
+.dashboard-container .table-container .table .table-row {
+  cursor: pointer;
+}
+.dashboard-container .table-container .table td {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}

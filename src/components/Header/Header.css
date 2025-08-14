@@ -1,0 +1,29 @@
+.header-wrapper {
+  padding-top: 3rem;
+  top: 0;
+  position: sticky;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.header-container .signout-button-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.header-container button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: .3rem;
+  border: none;
+  background-color: #ccc;
+}

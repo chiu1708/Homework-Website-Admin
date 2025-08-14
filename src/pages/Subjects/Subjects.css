@@ -1,0 +1,50 @@
+.content-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-container {
+  padding: 1rem 2rem;
+  padding-bottom: 3rem;
+}
+select, input[type="date"] {
+  height: 2rem;
+  width: 10rem;
+  border: 1px solid #444;
+  border-radius: .3rem;
+}
+
+.buttons-container {
+  justify-content: space-between;
+  width: 250px;
+}
+.buttons-container button {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+}
+.buttons-container button .button-icon {
+  font-size: 20px;
+}
+.buttons-container button .button-text {
+  font-size: 14px;
+}
+
+.content-input-container input[type="text"] {
+  width: 20rem;
+  border: 1px solid #444;
+  border-radius: .3rem;
+  margin: 0.5rem 0;
+}
+.content-input-container .remove-content-button {
+  width: 2rem;
+  border-radius: 2rem;
+  background-color: #E43636;
+}
+
+.submit-button-container .submit-button {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 5rem;
+  margin: 1rem 0;
+}
