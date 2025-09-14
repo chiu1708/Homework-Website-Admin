@@ -1,9 +1,16 @@
-import React from 'react'
+import "./Loading.css"
 
 const Loading = () => {
   return (
-    <div>Loading</div>
-  )
-}
+    <div className="d-flex justify-content-center align-items-center loading-container">
+      <div
+        className="spinner"
+        role="status"
+        aria-label="Loading..."
+      >
+      </div>
+    </div>
+  );
+};
 
-export default Loading
+export default Loading;

@@ -10,7 +10,8 @@ const EditTask = ({data, functions}) => {
     contentTypes,
     deadline,
     subjectID,
-    contents
+    contents,
+    loading
   } = data
   // get functions from props
   const {
@@ -19,7 +20,8 @@ const EditTask = ({data, functions}) => {
     handleAddTask,
     handleRemoveTask,
     handleSetContentField,
-    handleSubmit
+    handleSubmit,
+    handleDeleteTask
   } = functions
 
 
@@ -27,7 +29,7 @@ const EditTask = ({data, functions}) => {
   return (
     <>
       {
-        subjects.length === 0
+        loading
         ?
         <Loading />
         :
@@ -127,6 +129,7 @@ const EditTask = ({data, functions}) => {
           {/* Submit buttons */}
           <div className="section-container submit-button-container">
             <button onClick={() => handleSubmit("/")} className='submit-button'>Submit</button>
+            <button onClick={() => handleDeleteTask("/")} className='submit-button delete-button'>Delete</button>
           </div>
         </div>
       }

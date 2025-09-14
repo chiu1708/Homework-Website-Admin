@@ -48,3 +48,7 @@ select, input[type="date"] {
   border-radius: 5rem;
   margin: 1rem 0;
 }
+.submit-button-container .delete-button {
+  background-color: #E43636;
+  color: white
+}

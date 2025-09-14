@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { SubjectsContext, TasksContext } from '../../DataContext'
-import { addDoc, collection, doc, setDoc } from 'firebase/firestore'
+import { addDoc, collection, deleteDoc, doc, setDoc } from 'firebase/firestore'
 import { db } from '../../Firebase'
 import dayjs from 'dayjs'
 import AddTask from './AddTask'
@@ -19,9 +19,17 @@ const TasksHandler = () => {
     image: "image",
     link: "link"
   }
-  const [contents, setContents] = useState([]);
+  const [contents, setContents] = useState([])
   const [deadline, setDeadline] = useState(dayjs().toDate())
   const [subjectID, setSubjectID] = useState()
+  const [loading, setLoading] = useState(true)
+
+  // handle loading state
+  useEffect(() => {
+    if (subjects.length !== 0) { // currently only have to wait for subjects to load
+      setLoading(false)
+    }
+  }, [subjects])
 
 
   // determine what kind of feature to handle
@@ -39,7 +47,7 @@ const TasksHandler = () => {
     tasks = useContext(TasksContext)
     
     useEffect(() => {
-      if (tasks.length > 0) {
+      if (!loading && tasks.length > 0) { // if loading means it can be deleting, in that case, don't try to search for task
         const task = {...tasks.find(t => t.extraData.id == id)}
         
         setDeadline(task.deadline)
@@ -165,6 +173,11 @@ const TasksHandler = () => {
     setContents([])
     navigate("/")
   }
+  const handleDeleteTask = async (navigateTo="/") => {
+    await setLoading(true)
+    await deleteDoc(doc(db, "Tasks", id))
+    navigate(navigateTo)
+  }
 
 
   const data = {
@@ -172,14 +185,16 @@ const TasksHandler = () => {
     contentTypes,
     deadline,
     subjectID,
-    contents
+    contents,
+    loading
   }
   const functions = {
     handleSetDeadline,
     handleSetSubjectID,
     handleAddTask,
     handleRemoveTask,
-    handleSetContentField
+    handleSetContentField,
+    handleDeleteTask
   }
 
 

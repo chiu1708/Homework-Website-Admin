@@ -61,8 +61,6 @@ const useFirestoreData = (lang='vi') => {
 						...data,
 						deadline: data.deadline.toDate()
 				};
-
-
 			return task;});
 			setTasks(tasksData);
 		});

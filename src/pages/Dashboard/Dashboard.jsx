@@ -69,7 +69,7 @@ const Dashboard = () => {
           <Table striped bordered>
             <thead>
               <tr>
-                <th>Short name</th>
+                <th>Short</th>
                 <th>Name</th>
                 <th>Books Count</th>
               </tr>

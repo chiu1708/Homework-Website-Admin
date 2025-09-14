@@ -1,10 +1,10 @@
-.content-input-container {
+.book-input-container {
   display: flex;
   flex-direction: column;
 }
 
 .section-container {
-  padding: 1rem 2rem;
+  padding: .2rem 2rem;
   padding-bottom: 3rem;
 }
 select, input[type="date"] {
@@ -12,6 +12,12 @@ select, input[type="date"] {
   width: 10rem;
   border: 1px solid #444;
   border-radius: .3rem;
+}
+input[type="text"] {
+  width: 20rem;
+  border: 1px solid #444;
+  border-radius: .3rem;
+  margin: 0.5rem 0;
 }
 
 .buttons-container {
@@ -30,13 +36,13 @@ select, input[type="date"] {
   font-size: 14px;
 }
 
-.content-input-container input[type="text"] {
+.book-input-container input[type="text"] {
   width: 20rem;
   border: 1px solid #444;
   border-radius: .3rem;
   margin: 0.5rem 0;
 }
-.content-input-container .remove-content-button {
+.book-input-container .remove-book-button {
   width: 2rem;
   border-radius: 2rem;
   background-color: #E43636;
